@@ -80,7 +80,7 @@ map<Shipment> mockShipments = {
 };
 
 // HTTP service for mock shipment API
-service /api/v1 on new http:Listener(servicePort) {
+service /api/v1 on new http:Listener(8081) {
     
     // Get shipment by ID
     resource function get shipments/[string shipmentId]() returns Shipment|ShipmentNotFound|http:NotFound {
